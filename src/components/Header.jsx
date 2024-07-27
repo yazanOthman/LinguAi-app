@@ -9,13 +9,15 @@ const Header = () => {
         <div className="content-wrapper">
           <div className="header-content container">
             <h1 className="header-title">
-              Simplify Your Financial Life, Today!
+            Take Control of Your Finances with AI-Powered Insights!
             </h1>
             <p className="header-subtitle">
-              Manage your finances effortlessly with our intuitive platform.
-              Track your balance, monitor income, and control your expenses all
-              in one place.
+            Meet FinAI – Your Personal Finance Coach, Here to Help You Save More and Spend Smarter.
             </p>
+            <button>Join the Waitlist!</button>
+            {/* <p className="description">Discover the future of personal finance management. 
+              FinAI analyzes your spending habits, predicts future expenses, 
+              and offers personalized advice to help you achieve your financial goals.</p> */}
           </div>
           <div className="image-container">
             <img className="stat-img" src={statsImg} alt="" />

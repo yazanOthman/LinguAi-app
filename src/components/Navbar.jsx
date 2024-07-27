@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="custom-navbar">
       <div className="container">
         <a className="logo" href="/">
-          Finance app
+        AI-Powered Personal Finance Coach
         </a>
         <ul className={`nav ${isOpen && "show"}`}>
           <li className="item">
