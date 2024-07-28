@@ -120,8 +120,6 @@ const ContactModal = ({ onClose }) => {
         to_name: "LinguAI",
       };
 
-      console.log(credentials, payload);
-
       try {
         const response = await emailjs.send(
           credentials.service_id,
@@ -129,15 +127,12 @@ const ContactModal = ({ onClose }) => {
           payload,
           credentials.user_id
         );
-        console.log(response);
         if (response) {
           toast.success("Your email has been sent successfully!");
           setName("");
           setEmail("");
         }
       } catch (error) {
-        console.log(error);
-
         toast.error("failed to send email, please try again later");
       }
       onClose();
