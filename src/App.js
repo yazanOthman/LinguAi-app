@@ -6,6 +6,7 @@ import Features from "./components/Features";
 // import Testimonials from "./components/Testimonials";
 // import FAQ from "./components/FAQ";
 // import Footer from "./components/Footer";
+import Pricings from "./components/Pricings";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <main>
         <Features />
+        <Pricings />
         {/* <HowItWorks />
         <Testimonials />
         <FAQ /> */}
