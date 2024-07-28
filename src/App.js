@@ -14,11 +14,11 @@ function App() {
       <Header />
       <main>
         <Features />
-        <HowItWorks />
+        {/* <HowItWorks />
         <Testimonials />
-        <FAQ />
+        <FAQ /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

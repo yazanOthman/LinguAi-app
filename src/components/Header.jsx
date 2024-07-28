@@ -10,16 +10,14 @@ const Header = () => {
         <div className="content-wrapper">
           <div className="header-content container">
             <h1 className="header-title">
-              Take Control of Your Finances with AI-Powered Insights!
+              Learn Languages Effortlessly with Lingu AI
             </h1>
             <p className="header-subtitle">
-              Meet FinAI – Your Personal Finance Coach, Here to Help You Save
-              More and Spend Smarter.
+              Our AI-powered language learning app adapts to your needs,
+              providing personalized lessons and conversational practice to help
+              you become fluent faster.
             </p>
             <Button>Join the Waitlist!</Button>
-            {/* <p className="description">Discover the future of personal finance management. 
-              FinAI analyzes your spending habits, predicts future expenses, 
-              and offers personalized advice to help you achieve your financial goals.</p> */}
           </div>
           <div className="image-container">
             <img className="stat-img" src={statsImg} alt="" />

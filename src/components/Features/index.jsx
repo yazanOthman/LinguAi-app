@@ -1,37 +1,49 @@
 import React from "react";
 import FeatureItem from "./Feature";
 import styled from "styled-components";
+import { GoDependabot } from "react-icons/go";
+import { LiaHeadphonesSolid } from "react-icons/lia";
+import { LuBook } from "react-icons/lu";
+import { RiSpeedUpLine } from "react-icons/ri";
+import { MdDynamicFeed } from "react-icons/md";
+import { MdOutlineTopic } from "react-icons/md";
 
 const FEATURES = [
   {
-    title: "Automated Financial Analysis",
+    title: "Conversational Chatbot",
     description:
-      "Let FinAI analyze your financial data and provide you with clear, actionable insights to optimize your spending and saving.",
+      "Our AI-powered chatbot can adapt the complexity of the language to your level, making it easier to have natural conversations.",
+    icon: <GoDependabot />,
   },
   {
-    title: "Expense Categorization",
+    title: "Audio Lessons",
     description:
-      "Our advanced NLP technology categorizes your expenses automatically, giving you a detailed breakdown of where your money goes.",
+      "Learn through interactive audio lessons that cover pronunciation, vocabulary, and grammar.",
+    icon: <LiaHeadphonesSolid />,
   },
   {
-    title: "Predictive Budgeting",
+    title: "Text-based Learning",
     description:
-      "Set realistic budgets with our predictive models that forecast your future expenses based on past trends.",
+      "Supplement your audio lessons with interactive text-based exercises and quizzes to reinforce your learning.",
+    icon: <LuBook />,
   },
   {
-    title: "Savings Recommendations",
+    title: "Adaptive Difficulty",
     description:
-      "Receive AI-driven tips on how to save more effectively, tailored to your unique spending patterns.",
+      "Our AI continuously adjusts the difficulty of the content to match your current level, ensuring you're always challenged but never overwhelmed.",
+    icon: <RiSpeedUpLine />,
   },
   {
-    title: "Chatbot Assistance",
+    title: "Personalized  Topics",
     description:
-      "Get instant answers to your financial questions and personalized support through our AI-powered chatbot.",
+      "Empower your language learning journey with personalized conversation topics that cater to your interests and goals.",
+    icon: <MdOutlineTopic />,
   },
   {
-    title: "Personalized Financial Plans",
+    title: "Dynamic Dialogues",
     description:
-      "Achieve your financial goals with custom plans created just for you, based on your financial situation and objectives.",
+      "Experience realistic, interactive dialogues powered by AI, simulating conversations with native speakers.",
+    icon: <MdDynamicFeed />,
   },
 ];
 
@@ -43,9 +55,11 @@ const Features = () => {
   return (
     <StyledFeaturesList id="features" className="features">
       <div className="container">
-        <h2 className="section-title">
-          Smart Features for Smarter Financial Decisions
-        </h2>
+        <h2 className="section-title text-center">Learn Faster with AI</h2>
+        <p className="text-center">
+          Our AI-powered language learning app uses advanced technology to help
+          you master any language faster than ever before.
+        </p>
 
         <div className="feature-list">
           {FEATURES.map((feature, index) => (

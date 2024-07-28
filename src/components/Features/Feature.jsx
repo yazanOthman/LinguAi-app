@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 const StyledFeatureItem = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  ${({ odd }) => odd && "flex-direction: row-reverse;"}
   margin-bottom: 2rem;
 `;
 
@@ -12,11 +11,12 @@ const FeatureItem = ({ feature, odd }) => {
   return (
     <StyledFeatureItem odd={odd} className="feature-item">
       <div>
-        <h3>{feature.title}</h3>
+        <h3>
+          <span className="feature-icon"> {feature?.icon}</span>
+          {feature.title}
+        </h3>
         <p>{feature.description}</p>
       </div>
-
-      <div>Image</div>
     </StyledFeatureItem>
   );
 };
