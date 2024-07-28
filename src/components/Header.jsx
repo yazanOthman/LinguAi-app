@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import lingoAI_chatbox from "../imgs/lingoAI_chatbox.png";
 import Button from "@mui/joy/Button";
+import Modal from "../components/Modal";
 
 import styled from "styled-components";
 
@@ -34,6 +35,11 @@ const StyledImage = styled.img`
 `;
 
 const Header = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleClose = () => {
+    setModalOpen(false);
+  };
   return (
     <>
       <StyledHeader id="home" className="header">
@@ -47,7 +53,9 @@ const Header = () => {
               providing personalized lessons and conversational practice to help
               you become fluent faster.
             </p>
-            <Button>Join the Waitlist!</Button>
+            <Button onClick={() => setModalOpen(true)}>
+              Join the Waitlist!
+            </Button>
           </div>
           <div className="img-container">
             <StyledImage
@@ -61,6 +69,7 @@ const Header = () => {
         </div>
         <div className="overlay"></div>
       </StyledHeader>
+      {isModalOpen && <Modal onClose={handleClose} />}
     </>
   );
 };
