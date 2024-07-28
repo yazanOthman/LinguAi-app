@@ -7,6 +7,14 @@ import { LuBook } from "react-icons/lu";
 import { RiSpeedUpLine } from "react-icons/ri";
 import { MdDynamicFeed } from "react-icons/md";
 import { MdOutlineTopic } from "react-icons/md";
+import {
+  StyledSection,
+  StyledSectionTitle,
+  StyledSectionSubtitle,
+} from "../shared";
+
+const mdScreenSize = "765px";
+const lgScreenSize = " 1200px";
 
 const FEATURES = [
   {
@@ -47,31 +55,48 @@ const FEATURES = [
   },
 ];
 
-const StyledFeaturesList = styled.section`
-  padding: 0 5rem;
+const StyleFeatureContainer = styled.div`
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  p {
+    max-width: 24rem;
+    color: #8d8d8d;
+  }
+
+  @media (min-width: ${mdScreenSize}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: ${lgScreenSize}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    max-width: ${lgScreenSize};
+    margin: 0 auto;
+  }
 `;
 
 const Features = () => {
   return (
-    <StyledFeaturesList id="features" className="features">
-      <div className="container">
-        <h2 className="section-title text-center">Learn Faster with AI</h2>
-        <p className="text-center">
-          Our AI-powered language learning app uses advanced technology to help
-          you master any language faster than ever before.
-        </p>
+    <StyledSection bg={"white"} color="black">
+      <StyledSectionTitle>Learn Faster with AI</StyledSectionTitle>
+      <StyledSectionSubtitle color="black">
+        Our AI-powered language learning app adapts to your needs, providing
+        personalized lessons and conversational practice to help you become
+        fluent faster.
+      </StyledSectionSubtitle>
 
-        <div className="feature-list">
-          {FEATURES.map((feature, index) => (
-            <FeatureItem
-              odd={index % 2}
-              key={feature.title}
-              feature={feature}
-            />
-          ))}
-        </div>
-      </div>
-    </StyledFeaturesList>
+      <StyleFeatureContainer>
+        {FEATURES.map((feature, index) => (
+          <FeatureItem odd={index % 2} key={feature.title} feature={feature} />
+        ))}
+      </StyleFeatureContainer>
+    </StyledSection>
   );
 };
 

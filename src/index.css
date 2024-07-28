@@ -643,35 +643,6 @@ h6, .h6 {
 }
 
 
-.feature-list {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.feature-list p {
-  max-width: 24rem;
-  color: #8d8d8d;
-}
-
-
 .feature-icon{
   margin-right: 5px;
-}
-
-
-@media screen and (min-width: 576px) {
-  .feature-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem;
-  }
-}
-
-
-@media screen and (min-width: 1200px) {
-  .feature-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 5px;
-  }
 }

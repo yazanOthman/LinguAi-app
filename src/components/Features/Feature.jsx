@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
+const mdScreenSize = "765px";
+
 const StyledFeatureItem = styled.div`
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  justify-content: center;
+  @media (min-width: ${mdScreenSize}) {
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
 `;
 
 const FeatureItem = ({ feature, odd }) => {
